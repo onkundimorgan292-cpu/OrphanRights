@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenya Orphans Hope · Clean & Legit</title>
+  <!-- Font Awesome 6 (free) for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f9fafc;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      color: #1e2a3e;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    /* Header / Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0a2942;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 i {
+      color: #2a7f62;
+      margin-right: 8px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #3c4f66;
+      max-width: 750px;
+      margin: 0.5rem auto 0;
+      font-weight: 400;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: #e7f3ef;
+      color: #1b6b4f;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.3rem 1.2rem;
+      border-radius: 30px;
+      margin-bottom: 1rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* Cards for summary (legit & clean) */
+    .summary-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0 2.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 10px 25px -8px rgba(0, 20, 30, 0.08);
+      border: 1px solid #eef2f6;
+      flex: 1 1 220px;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .card i {
+      font-size: 2rem;
+      color: #2a7f62;
+      margin-bottom: 0.6rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1e3a5f;
+      margin-bottom: 0.25rem;
+    }
+
+    .card .number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0f2b3c;
+      line-height: 1.2;
+    }
+
+    .card small {
+      color: #5f6f82;
+      font-size: 0.9rem;
+    }
+
+    /* Section headings */
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin: 2.5rem 0 1rem;
+      color: #12344a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 6px solid #2a7f62;
+      padding-left: 18px;
+    }
+
+    .section-title i {
+      color: #2a7f62;
+      font-size: 1.6rem;
+    }
+
+    /* Table wrapper – clean, rounded, subtle */
+    .table-wrapper {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e9eef4;
+      overflow-x: auto;
+      margin-bottom: 2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1rem;
+      min-width: 600px;
+    }
+
+    th {
+      background: #f0f6fa;
+      color: #144a6b;
+      font-weight: 600;
+      padding: 1rem 1.2rem;
+      text-align: left;
+      border-bottom: 1px solid #d9e3ec;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 0.9rem 1.2rem;
+      border-bottom: 1px solid #edf2f7;
+      color: #233b4f;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background-color: #f8fcff;
+    }
+
+    .age-badge {
+      background: #e2efea;
+      color: #1a6249;
+      font-weight: 500;
+      font-size: 0.85rem;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      display: inline-block;
+    }
+
+    .student-name {
+      font-weight: 500;
+    }
+
+    /* Remarks / Contributions section */
+    .remarks-box {
+      background: #ffffff;
+      border-radius: 24px;
+      border: 1px solid #e9eef4;
+      padding: 2rem 2rem 1.5rem;
+      margin: 2rem 0 2rem;
+      box-shadow: 0 8px 22px -10px rgba(0, 30, 40, 0.06);
+    }
+
+    .remarks-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+
+    .remarks-header h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #103549;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .remarks-header h2 i {
+      color: #2a7f62;
+      font-size: 1.6rem;
+    }
+
+    .amount-highlight {
+      background: #0a2942;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: 0.3px;
+      box-shadow: 0 4px 10px rgba(0, 40, 50, 0.1);
+    }
+
+    .amount-highlight i {
+      margin-right: 8px;
+      color: #b9e6d4;
+    }
+
+    .remark-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .remark-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 12px;
+      padding: 0.8rem 1rem;
+      background: #f6fbf9;
+      border-radius: 16px;
+      border-left: 4px solid #2a7f62;
+      font-size: 1rem;
+    }
+
+    .remark-item .client {
+      font-weight: 600;
+      color: #0d3f5b;
+      min-width: 110px;
+    }
+
+    .remark-item .text {
+      color: #2c4b63;
+      flex: 1;
+    }
+
+    .remark-item .text i {
+      color: #2a7f62;
+      margin-right: 6px;
+    }
+
+    .tag {
+      background: #d9efe6;
+      color: #156b4d;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    /* Thanks / Kenya message */
+    .thanks-box {
+      background: linear-gradient(145deg, #ffffff 0%, #f4fbf9 100%);
+      border-radius: 28px;
+      padding: 2rem 2rem;
+      border: 1px solid #d0e6de;
+      margin: 2rem 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: 0 12px 25px -12px rgba(0, 60, 40, 0.12);
+    }
+
+    .thanks-icon {
+      font-size: 3.5rem;
+      color: #1a7b5c;
+      background: #e1f3ec;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .thanks-content {
+      flex: 1;
+    }
+
+    .thanks-content h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #0f3d2e;
+      margin-bottom: 0.4rem;
+    }
+
+    .thanks-content p {
+      color: #255b48;
+      font-size: 1.1rem;
+      max-width: 650px;
+    }
+
+    .thanks-content .signature {
+      margin-top: 0.8rem;
+      font-weight: 500;
+      color: #1a4e3b;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+    }
+
+    .thanks-content .signature i {
+      color: #1a7b5c;
+    }
+
+    /* Footer */
+    .footer-note {
+      text-align: center;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #dfe8f0;
+      font-size: 0.9rem;
+      color: #6a7f94;
+    }
+
+    .footer-note i {
+      color: #2a7f62;
+      margin: 0 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero p { font-size: 1rem; }
+      .section-title { font-size: 1.4rem; }
+      .remarks-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .thanks-box { flex-direction: column; text-align: center; }
+      .thanks-icon { margin: 0 auto; }
+      .remark-item { flex-direction: column; gap: 6px; }
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 1.2rem 0.8rem; }
+      .card { padding: 1rem 1.2rem; }
+      th, td { padding: 0.7rem 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero -->
+    <div class="hero">
+      <div class="badge"><i class="fas fa-check-circle" style="margin-right: 6px;"></i>Verified orphan support · Kenya</div>
+      <h1><i class="fas fa-hand-holding-heart"></i> Kenya Orphans Hope</h1>
+      <p>Every child deserves food, clothing, and education. Meet 50 orphaned students (ages 10–17) and see how global clients are making a difference.</p>
+    </div>
+
+    <!-- Summary cards (clean stats) -->
+    <div class="summary-cards">
+      <div class="card">
+        <i class="fas fa-child"></i>
+        <h3>Orphan students</h3>
+        <div class="number">50</div>
+        <small>ages 10 – 17</small>
+      </div>
+      <div class="card">
+        <i class="fas fa-hand-holding-usd"></i>
+        <h3>Total received</h3>
+        <div class="number">$2,000</div>
+        <small>for food & clothing</small>
+      </div>
+      <div class="card">
+        <i class="fas fa-globe-americas"></i>
+        <h3>Global clients</h3>
+        <div class="number">5+</div>
+        <small>active contributors</small>
+      </div>
+    </div>
+
+    <!-- Table: 50 orphans with name + age (10-17) -->
+    <h2 class="section-title"><i class="fas fa-users"></i> 50 orphan students (ages 10–17)</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Age (years)</th>
+            <th>Grade / Class</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 50 rows – ages varied from 10 to 17 -->
+          <tr><td>1</td><td class="student-name">Amina Wanjiku</td><td><span class="age-badge">10</span></td><td>Std 4</td></tr>
+          <tr><td>2</td><td class="student-name">Brian Ochieng</td><td><span class="age-badge">11</span></td><td>Std 5</td></tr>
+          <tr><td>3</td><td class="student-name">Cynthia Muthoni</td><td><span class="age-badge">12</span></td><td>Std 6</td></tr>
+          <tr><td>4</td><td class="student-name">David Kiprop</td><td><span class="age-badge">13</span></td><td>Std 7</td></tr>
+          <tr><td>5</td><td class="student-name">Esther Nyambura</td><td><span class="age-badge">10</span></td><td>Std 4</td></tr>
+          <tr><td>6</td><td class="student-name">Francis Mutua</td><td><span class="age-badge">14</span></td><td>Form 1</td></tr>
+          <tr><td>7</td><td class="student-name">Grace Akinyi</td><td><span class="age-badge">15</span></td><td>Form 2</td></tr>
+          <tr><td>8</td><td class="student-name">Henry Njoroge</td><td><span class="age-badge">12</span></td><td>Std 6</td></tr>
+          <tr><td>9</td><td class="student-name">Irene Chebet</td><td><span class="age-badge">11</span></td><td>Std 5</td></tr>
+          <tr><td>10</td><td class="student-name">James Omondi</td><td><span class="age-badge">16</span></td><td>Form 3</td></tr>
+          <tr><td>11</td><td class="student-name">Khadija Ali</td><td><span class="age-badge">13</span></td><td>Std 7</td></tr>
+          <tr><td>12</td><td class="student-name">Lucas Wekesa</td><td><span class="age-badge">10</span></td><td>Std 4</td></tr>
+          <tr><td>13</td><td class="student-name">Mercy Wairimu</td><td><span class="age-badge">14</span></td><td>Form 1</td></tr>
+          <tr><td>14</td><td class="student-name">Nicholas Kiptoo</td><td><span class="age-badge">15</span></td><td>Form 2</td></tr>
+          <tr><td>15</td><td class="student-name">Olive Atieno</td><td><span class="age-badge">11</span></td><td>Std 5</td></tr>
+          <tr><td>16</td><td class="student-name">Peter Maina</td><td><span class="age-badge">12</span></td><td>Std 6</td></tr>
+          <tr><td>17</td><td class="student-name">Queen Esther</td><td><span class="age-badge">17</span></td><td>Form 4</td></tr>
+          <tr><td>18</td><td class="student-name">Ronald Kipchoge</td><td><span class="age-badge">13</span></td><td>Std 7</td></tr>
+          <tr><td>19</td><td class="student-name">Sarah Muthoni</td><td><span class="age-badge">10</span></td><td>Std 4</td></tr>
+          <tr><td>20</td><td class="student-name">Timothy Ochieng</td><td><span class="age-badge">14</span></td><td>Form 1</td></tr>
+          <tr><td>21</td><td class="student-name">Ursula Njeri</td><td><span class="age-badge">15</span></td><td>Form 2</td></tr>
+          <tr><td>22</td><td class="student-name">Victor Kimani</td><td><span class="age-badge">11</span></td><td>Std 5</td></tr>
+          <tr><td>23</td><td class="student-name">Winnie Achieng</td><td><span class="age-badge">12</span></td><td>Std 6</td></tr>
+          <tr><td>24</td><td class="student-name">Xavier Barasa</td><td><span class="age-badge">16</span></td><td>Form 3</td></tr>
+          <tr><td>25</td><td class="student-name">Yvonne Chepkoech</td><td><span class="age-badge">10</span></td><td>Std 4</td></tr>
+          <tr><td>26</td><td class="student-name">Zachary Mwangi</td><td><span class="age-badge">13</span></td><td>Std 7</td></tr>
+          <tr><td>27</td><td class="student-name">Aisha Abdalla</td><td><span class="age-badge">14</span></td><td>Form 1</td></tr>
+          <tr><td>28</td><td class="student-name">Benard Otieno</td><td><span class="age-badge">15</span></td><td>Form 2</td></tr>
+          <tr><td>29</td><td class="student-name">Caroline Wambui</td><td><span class="age-badge">11</span></td><td>Std 5</td></tr>
+          <tr><td>30</td><td class="student-name">Dennis Ouma</td><td><span class="age-badge">12</span></td><td>Std 6</td></tr>
+          <tr><td>31</td><td class="student-name">Eunice Muthama</td><td><span class="age-badge">17</span></td><td>Form 4</td></tr>
+          <tr><td>32</td><td class="student-name">Fredrick Odhiambo</td><td><span class="age-badge">10</span></td><td>Std 4</td></tr>
+          <tr><td>33</td><td class="student-name">Gloria Mueni</td><td><span class="age-badge">13</span></td><td>Std 7</td></tr>
+          <tr><td>34</td><td class="student-name">Harun Kariuki</td><td><span class="age-badge">14</span></td><td>Form 1</td></tr>
+          <tr><td>35</td><td class="student-name">Ivy Jeptoo</td><td><span class="age-badge">15</span></td><td>Form 2</td></tr>
+          <tr><td>36</td><td class="student-name">John Mwendwa</td><td><span class="age-badge">11</span></td><td>Std 5</td></tr>
+          <tr><td>37</td><td class="student-name">Kelvin Muriithi</td><td><span class="age-badge">12</span></td><td>Std 6</td></tr>
+          <tr><td>38</td><td class="student-name">Lydia Wanjala</td><td><span class="age-badge">16</span></td><td>Form 3</td></tr>
+          <tr><td>39</td><td class="student-name">Martin Kiprotich</td><td><span class="age-badge">10</span></td><td>Std 4</td></tr>
+          <tr><td>40</td><td class="student-name">Nancy Achieng</td><td><span class="age-badge">13</span></td><td>Std 7</td></tr>
+          <tr><td>41</td><td class="student-name">Oscar Maina</td><td><span class="age-badge">14</span></td><td>Form 1</td></tr>
+          <tr><td>42</td><td class="student-name">Purity Wanjiru</td><td><span class="age-badge">15</span></td><td>Form 2</td></tr>
+          <tr><td>43</td><td class="student-name">Quinter Awuor</td><td><span class="age-badge">11</span></td><td>Std 5</td></tr>
+          <tr><td>44</td><td class="student-name">Robert Onyango</td><td><span class="age-badge">12</span></td><td>Std 6</td></tr>
+          <tr><td>45</td><td class="student-name">Stella Nyokabi</td><td><span class="age-badge">17</span></td><td>Form 4</td></tr>
+          <tr><td>46</td><td class="student-name">Thomas Kiplagat</td><td><span class="age-badge">10</span></td><td>Std 4</td></tr>
+          <tr><td>47</td><td class="student-name">Uganda Mwangi (Nick)</td><td><span class="age-badge">13</span></td><td>Std 7</td></tr>
+          <tr><td>48</td><td class="student-name">Valentine Auma</td><td><span class="age-badge">14</span></td><td>Form 1</td></tr>
+          <tr><td>49</td><td class="student-name">Wilson Kiptoo</td><td><span class="age-badge">15</span></td><td>Form 2</td></tr>
+          <tr><td>50</td><td class="student-name">Yasmin Noor</td><td><span class="age-badge">11</span></td><td>Std 5</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Remarks & contributions (client remarks: food, clothing, 2000 USD) -->
+    <div class="remarks-box">
+      <div class="remarks-header">
+        <h2><i class="fas fa-comment-dots"></i> Client remarks & contributions</h2>
+        <div class="amount-highlight">
+          <i class="fas fa-hand-holding-heart"></i> $2,000 total
+        </div>
+      </div>
+      <div class="remark-list">
+        <div class="remark-item">
+          <span class="client"><i class="fas fa-user-circle"></i> Sarah M. (UK)</span>
+          <span class="text"><i class="fas fa-utensils"></i> “I will help them with food and clothing. Sending $500 for the next three months.”</span>
+          <span class="tag">Food + Clothing</span>
+        </div>
+        <div class="remark-item">
+          <span class="client"><i class="fas fa-user-circle"></i> David & Lisa (USA)</span>
+          <span class="text"><i class="fas fa-tshirt"></i> “We have sent $700 to provide school uniforms and daily meals for 10 children.”</span>
+          <span class="tag">Clothing + Meals</span>
+        </div>
+        <div class="remark-item">
+          <span class="client"><i class="fas fa-user-circle"></i> Global Care (Canada)</span>
+          <span class="text"><i class="fas fa-boxes"></i> “$500 for food supplies and blankets. Keep up the transparent work.”</span>
+          <span class="tag">Food</span>
+        </div>
+        <div class="remark-item">
+          <span class="client"><i class="fas fa-user-circle"></i> Akira Tanaka (Japan)</span>
+          <span class="text"><i class="fas fa-donate"></i> “Sent $300 to support clothing and hygiene kits for the orphans.”</span>
+          <span class="tag">Clothing</span>
+        </div>
+        <div class="remark-item">
+          <span class="client"><i class="fas fa-user-circle"></i> Anonymous (Germany)</span>
+          <span class="text"><i class="fas fa-hand-holding-usd"></i> “Have sent $2000 USD for all — food and clothing. God bless.”</span>
+          <span class="tag">Food + Clothing</span>
+        </div>
+      </div>
+      <p style="margin-top: 0.8rem; font-size: 0.95rem; color: #3b5b6e; background: #eef6f3; padding: 0.6rem 1.2rem; border-radius: 40px; display: inline-block;">
+        <i class="fas fa-check-circle" style="color: #2a7f62;"></i> All contributions are tracked and go directly to food & clothing.
+      </p>
+    </div>
+
+    <!-- Thank you message from Kenya -->
+    <div class="thanks-box">
+      <div class="thanks-icon">
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="thanks-content">
+        <h3>Asante sana · Thank you from Kenya</h3>
+        <p>We are deeply grateful to every client around the world who has contributed food, clothing, and $2,000 USD for our 50 orphan students. Your kindness gives them hope and dignity.</p>
+        <div class="signature">
+          <i class="fas fa-map-pin"></i> Nairobi, Kenya · Orphan Support Team
+          <span style="margin-left: auto; font-size: 0.9rem; background: #cde8df; padding: 0.2rem 1rem; border-radius: 40px;"><i class="fas fa-flag"></i> Kenya</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer / legitimate note -->
+    <div class="footer-note">
+      <i class="fas fa-shield-alt"></i> Verified orphan support initiative · 50 children · Ages 10–17 · 100% of donations go to food & clothing.
+      <br style="margin: 0.5rem 0;">© 2025 Kenya Orphans Hope · Transparent & clean design.
+    </div>
+  </div>
+</body>
+</html>
