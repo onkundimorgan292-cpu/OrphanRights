@@ -351,6 +351,85 @@
       margin: 0 3px;
     }
 
+    /* ----- WHATSAPP BUTTON (perfected) ----- */
+    .whatsapp-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background: #ffffff;
+      border-radius: 60px;
+      padding: 1rem 1.5rem 1rem 2rem;
+      margin: 2rem 0 2.5rem;
+      border: 1px solid #d9e9e2;
+      box-shadow: 0 6px 18px -6px rgba(0, 80, 60, 0.12);
+      transition: all 0.2s;
+    }
+
+    .whatsapp-section:hover {
+      border-color: #2a7f62;
+      box-shadow: 0 12px 24px -10px rgba(0, 80, 60, 0.2);
+    }
+
+    .whatsapp-text {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #0a2b1f;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    .whatsapp-text i {
+      font-size: 1.8rem;
+      color: #25D366;
+    }
+
+    .whatsapp-number {
+      background: #e8f5f0;
+      padding: 0.2rem 0.9rem;
+      border-radius: 40px;
+      font-weight: 600;
+      color: #1b4e3b;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #25D366;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 18px -6px rgba(37, 211, 102, 0.5);
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+
+    .whatsapp-btn i {
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1da851;
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px -6px rgba(37, 211, 102, 0.6);
+    }
+
+    .whatsapp-btn:active {
+      transform: scale(0.98);
+    }
+
     /* Responsive */
     @media (max-width: 700px) {
       .hero h1 { font-size: 1.9rem; }
@@ -360,12 +439,27 @@
       .thanks-box { flex-direction: column; text-align: center; }
       .thanks-icon { margin: 0 auto; }
       .remark-item { flex-direction: column; gap: 6px; }
+
+      .whatsapp-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+      }
+      .whatsapp-text {
+        flex-direction: column;
+        gap: 6px;
+      }
+      .whatsapp-btn {
+        width: 100%;
+        justify-content: center;
+      }
     }
 
     @media (max-width: 480px) {
       body { padding: 1.2rem 0.8rem; }
       .card { padding: 1rem 1.2rem; }
       th, td { padding: 0.7rem 0.9rem; }
+      .whatsapp-number { font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -507,6 +601,25 @@
         <i class="fas fa-check-circle" style="color: #2a7f62;"></i> All contributions are tracked and go directly to food & clothing.
       </p>
     </div>
+
+    <!-- ========== WHATSAPP BUTTON (PERFECT) ========== -->
+    <div class="whatsapp-section">
+      <div class="whatsapp-text">
+        <i class="fab fa-whatsapp"></i>
+        <span>Pay / contribute via WhatsApp</span>
+        <span class="whatsapp-number"><i class="fas fa-phone-alt"></i> +254 788 245 106</span>
+      </div>
+      <a 
+        href="https://wa.me/254788245106?text=Hello%20Kenya%20Orphans%20Hope%2C%20I%20want%20to%20pay%20for%20the%20orphans.%20I%20have%20sent%20my%20contribution%20and%20would%20like%20to%20receive%20details%20on%20food%20and%20clothing.%20Thank%20you."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-btn"
+        aria-label="Send payment details via WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i> Tap to send payment
+      </a>
+    </div>
+    <!-- ========== END WHATSAPP BUTTON ========== -->
 
     <!-- Thank you message from Kenya -->
     <div class="thanks-box">
